@@ -31,7 +31,6 @@ body {
     z-index: 1000;
     box-sizing: border-box; /* Para asegurarse de que el padding esté incluido en el tamaño total */
     backdrop-filter: blur(10px); /* Aplicamos un filtro de desenfoque */
-    transition: all 0.3s ease;
 }
 
 .logo {
@@ -54,6 +53,12 @@ body {
 .club-name {
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav ul {
@@ -201,14 +206,8 @@ form button:hover {
         flex-direction: column;
         align-items: center;
         gap: 0.5rem;
-        margin-top: 1rem;
     }
     
-    .nav ul li {
-        width: 100%;
-        text-align: center;
-    }
-
     .section {
         padding: 2rem 1rem;
         height: auto;
@@ -222,17 +221,5 @@ form button:hover {
     .team-member img {
         width: 80px;
         height: 80px;
-    }
-
-    .footer {
-        padding: 1rem;
-    }
-
-    .sponsors {
-        height: 80px;
-    }
-
-    .sponsors-logos img {
-        height: 60px;
     }
 }
