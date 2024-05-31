@@ -59,7 +59,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .nav ul {
@@ -68,7 +67,6 @@ body {
     gap: 1rem;
     margin: 0;
     padding: 0;
-    flex-wrap: wrap;
 }
 
 .nav a {
@@ -209,6 +207,11 @@ form button:hover {
         align-items: center;
         gap: 0.5rem;
         width: 100%;
+        display: none; /* Oculto por defecto en dispositivos móviles */
+    }
+
+    .nav ul.active {
+        display: flex; /* Mostrar cuando está activo */
     }
 
     .nav a {
@@ -232,5 +235,32 @@ form button:hover {
     .team-member img {
         width: 80px;
         height: 80px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+
+    .bar {
+        height: 3px;
+        width: 25px;
+        background-color: var(--white-color);
+        margin: 4px 0;
+        transition: 0.3s;
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
     }
 }
