@@ -1,13 +1,9 @@
 // scripts.js
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
 
-window.addEventListener('resize', function() {
-    document.querySelectorAll('.section').forEach(section => {
-        section.style.height = `${window.innerHeight - document.querySelector('.header').offsetHeight}px`;
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.section').forEach(section => {
-        section.style.height = `${window.innerHeight - document.querySelector('.header').offsetHeight}px`;
+    menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('show');
     });
 });
