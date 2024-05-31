@@ -59,6 +59,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .nav ul {
@@ -67,6 +68,7 @@ body {
     gap: 1rem;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
 }
 
 .nav a {
@@ -78,20 +80,6 @@ body {
 
 .nav a:hover {
     color: var(--accent-color);
-}
-
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background-color: var(--white-color);
-    margin: 4px 0;
-    transition: all 0.3s ease;
 }
 
 .section {
@@ -216,12 +204,6 @@ form button:hover {
         font-size: 1.2rem;
     }
     
-    .nav {
-        display: none; /* Ocultar el menú de navegación por defecto en móviles */
-        flex-direction: column;
-        width: 100%;
-    }
-
     .nav ul {
         flex-direction: column;
         align-items: center;
@@ -235,10 +217,6 @@ form button:hover {
         padding: 0.5rem 0;
         border-top: 1px solid var(--white-color);
         border-bottom: 1px solid var(--white-color);
-    }
-    
-    .menu-toggle {
-        display: flex; /* Mostrar el botón de menú en móviles */
     }
 
     .section {
@@ -255,9 +233,4 @@ form button:hover {
         width: 80px;
         height: 80px;
     }
-}
-
-/* Estilos adicionales para el menú desplegable */
-.nav.show {
-    display: flex; /* Mostrar el menú cuando se activa */
 }
